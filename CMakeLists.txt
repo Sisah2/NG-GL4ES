@@ -4,7 +4,7 @@ project(ng_gl4es)
 
 enable_language(CXX)
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_C_STANDARD 11)
@@ -98,6 +98,7 @@ set(C_SRC_FILES
         src/glx/streaming.c
         src/gl/vgpu/shaderconv.c
         src/gl/samplers.c
+        src/gl/libtxc_dxtn/txc_compress_dxtn.c
         )
 
 if(NOT ANDROID)
