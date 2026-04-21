@@ -369,6 +369,7 @@ precision highp int;\n\
 #define texture2DLod textureLod\n\
 #define textureSize2D textureSize\n\
 #define sample sample2\n\
+#define ANDROID\n\
 ");
 //        source = InplaceReplaceSimple(source, &sourceLength, "textureSize2D", "textureSize");
 
