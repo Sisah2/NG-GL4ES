@@ -914,10 +914,11 @@ std::string GLSLtoGLSLES_2(const char* glsl_code, GLenum glsl_type, unsigned int
     }
 
     // Post-processing ESSL
-
+/*
     if (glsl_type != GL_COMPUTE_SHADER) {
         essl = removeLayoutBinding(essl);
     }
+*/
     essl = processOutColorLocations(essl);
     essl = forceSupporterOutput(essl);
 
