@@ -434,6 +434,17 @@ extern "C"
             return (const GLubyte*)rendererString.c_str();
         }
         case GL_SHADING_LANGUAGE_VERSION:
+            LOAD_GLES(glGetIntegerv);
+            GLint maxFragmentSSBOs;
+            GLint maxVertexSSBOs;
+            GLint maxComputeSSBOs;
+            glGetIntegerv(GL_MAX_FRAGMENT_SHADER_STORAGE_BLOCKS, &maxFragmentSSBOs);
+            glGetIntegerv(GL_MAX_VERTEX_SHADER_STORAGE_BLOCKS, &maxVertexSSBOs);
+            glGetIntegerv(GL_MAX_COMPUTE_SHADER_STORAGE_BLOCKS, &maxComputeSSBOs);
+
+            if (maxFragmentSSBOs < 5 || maxVertexSSBOs < 5 || maxComputeSSBOs < 5)
+                return (GLubyte*)"3.20 Krypton Wrapper with glslang and SPIRV-Cross";
+
             return (GLubyte*)"4.50 Krypton Wrapper with glslang and SPIRV-Cross";
         case GL_PROGRAM_ERROR_STRING_ARB:
             return (GLubyte*)glstate->glsl->error_msg;
