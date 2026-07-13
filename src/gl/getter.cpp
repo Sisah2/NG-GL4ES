@@ -204,8 +204,9 @@ extern "C"
             strcat(extensions, "GL_EXT_gpu_shader4 ");
             strcat(extensions, "GL_EXT_texture3D ");
             strcat(extensions, "GL_EXT_texture_rg ");
+            strcat(extensions, "GL_EXT_texture_array ");
             strcat(extensions, "GL_ARB_color_buffer_float ");
-        //    strcat(extensions, "GL_ARB_depth_buffer_float ");
+            //strcat(extensions, "GL_ARB_depth_buffer_float ");
             strcat(extensions, "GL_ARB_shadow ");
 
             if (!globals4es.notexrect) strcat(extensions, "GL_ARB_texture_rectangle ");

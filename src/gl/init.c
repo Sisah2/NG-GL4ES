@@ -179,7 +179,6 @@ void initialize_gl4es() {
     }
 
     globals4es.dxtmipmap = ReturnEnvVarInt("LIBGL_DXTMIPMAP");
-
     env(LIBGL_INSTANCING, globals4es.instancing, "Using HW glDrawElementsInstanced");
 
     const int LIBGL_FB_ENV_VAR =
